@@ -1,0 +1,69 @@
+:root {
+    --hero-text: #000;
+    --heading-hover-color: #43ABF0;
+    --accent-color-1: #3E9CDC;
+    --general-text: #fff;
+    --button-bg: #fff;
+    --footer-bg: #3d4050;
+    --footer-color: #c3c3c3;
+    --general-bg: #10101de6;
+    --burger-menu-bg: #10101d;
+    --border-button: #6f6d7b;
+    --border-icon: #286690;
+    --color-bbb: #bbb;
+    --font-family: "Lato", sans-serif;
+    --second-family: "Raleway", sans-serif;
+    --transition: .2s;
+}
+
+.body {
+    font-family: var(--font-family);
+    background: var(--general-bg);
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.button {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 15px 0;
+    max-width: 183px;
+    width: 100%;
+    border: 1px solid var(--border-button);
+    background-color: var(--button-bg);
+    color: var(--hero-text);
+    text-align: center;
+    font-family: var(--font-family);
+    transition: all var(--transition);
+}
+
+.button:hover {
+    background-color: var(--accent-color-1);
+    color: var(--general-text);
+    border: 1px solid var(--general-text);
+}
+

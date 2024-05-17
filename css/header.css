@@ -1,0 +1,115 @@
+.header {
+  padding: 33px 0 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--general-bg);
+  z-index: 5;
+  transition: all var(--transition);
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+}
+
+.header__logo {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: var(--general-text);
+  z-index: 10;
+}
+.header__logo span{
+  color: var(--accent-color-1);
+}
+
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  gap: 60px;
+}
+
+.header__link {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--general-text);
+  transition: color var(--transition);
+}
+
+.header__link:hover {
+  color: var(--heading-hover-color);
+}
+
+/* --------------------------Настройка Header Бургер----------------------------- */
+
+.burger-icon {
+  display: none;
+  width: 60px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+
+.burger-icon span,
+.burger-icon span::after,
+.burger-icon span::before {
+  height: 4px;
+  width: 40px;
+  border-radius: 50px;
+  background-color: var(--general-text);
+  transition: var(--transition);
+}
+.burger-icon:hover span,
+.burger-icon:hover span::after,
+.burger-icon:hover span::before {
+  background-color: var(--heading-hover-color);
+}
+
+.burger-icon span::after,
+.burger-icon span::before {
+  content: '';
+  position: absolute;
+}
+
+.burger-icon span {
+  position: relative;
+}
+
+.burger-icon span::after {
+  top: 10px;
+}
+
+.burger-icon span::before {
+  bottom: 10px;
+}
+
+/* -------------------------Настройка Header Бургер=>Крестик---------------------------- */
+
+.body--opened-menu .burger-icon span::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.body--opened-menu .burger-icon span::before {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+.body--opened-menu .burger-icon span {
+  background: transparent;
+}
+
+.header__hero {
+  padding: 48px 0 140px;
+}
